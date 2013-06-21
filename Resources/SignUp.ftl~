@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>SignUp</title></head><body><big><big><big><big><big>Sign Up</big></big></big></big></big><br>
+<br>
+<br>
+<form method="post" action="/SignUpComplete" name="SignUpForm" onsubmit="this.submit(); this.reset(); return false;">Name : <input name="name"><br>
+  <br>
+Email : <input name="email"> <br>
+  <br>
+Username : <input name="username">&nbsp;&nbsp; ${status}<br>
+  <br>
+Password : <input name="password" type="password"><br>
+  <br>
+  <button value="SignUp" name="SignUp">Sign Up</button>&nbsp;<button value="Reset" name="Reset" type="reset">Reset</button><br>
+  <br>
+</form>
+
+
+</body></html>
