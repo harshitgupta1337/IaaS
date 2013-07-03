@@ -27,6 +27,7 @@ import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
+import com.xerox.amazonws.ec2.InstanceType;
 import com.xerox.amazonws.ec2.Jec2;
 import com.xerox.amazonws.ec2.LaunchConfiguration;
 import com.xerox.amazonws.ec2.ReservationDescription;
@@ -712,6 +713,7 @@ public class Login
 							
 							LaunchConfiguration lc = new LaunchConfiguration(instance.get("emi").toString());
 							lc.setKeyName("mykey");
+							lc.setInstanceType(InstanceType.valueOf(instance.get("type").toString()));
 							if(instance.get("instanceID").toString().equals("null"))
 							{
 								ReservationDescription resDesc =  connection.runInstances(lc);
